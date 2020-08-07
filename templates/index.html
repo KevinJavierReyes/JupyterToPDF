@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8"/>
+		<title>Shortcut | JupyterToPDF</title>
+
+		<link rel="icon" type="image/png" href="https://instagram.flim16-1.fna.fbcdn.net/v/t51.2885-19/s150x150/101845984_861677847692436_4668224321045223550_n.jpg?_nc_ht=instagram.flim16-1.fna.fbcdn.net&_nc_ohc=lZEu_Eb8d5YAX-XPVqV&oh=14813d68ed114a00883bbb930533f2bb&oe=5F5593A6" sizes="16x16">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+		<!-- Google web fonts -->
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel='stylesheet' />
+
+		<!-- The main CSS file -->
+		
+
+		<!-- Primary Meta Tags -->
+		<title>Shortcut | JupyterToPDF</title>
+		<meta name="title" content="Shortcut | JupyterToPDF">
+		<meta name="description" content="Convert your Jupyter Notebooks to a PDF file.">
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="http://JupyterToPDF.gotshortcut.com/">
+		<meta property="og:title" content="Shortcut | JupyterToPDF">
+		<meta property="og:description" content="Convert your Jupyter Notebooks to a PDF file.">
+		<meta property="og:image" content="https://instagram.flim16-1.fna.fbcdn.net/v/t51.2885-19/s150x150/101845984_861677847692436_4668224321045223550_n.jpg?_nc_ht=instagram.flim16-1.fna.fbcdn.net&_nc_ohc=lZEu_Eb8d5YAX-XPVqV&oh=14813d68ed114a00883bbb930533f2bb&oe=5F5593A6">
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:url" content="http://JupyterToPDF.gotshortcut.com/">
+		<meta property="twitter:title" content="Shortcut | JupyterToPDF">
+		<meta property="twitter:description" content="Convert your Jupyter Notebooks to a PDF file.">
+		<meta property="twitter:image" content="https://instagram.flim16-1.fna.fbcdn.net/v/t51.2885-19/s150x150/101845984_861677847692436_4668224321045223550_n.jpg?_nc_ht=instagram.flim16-1.fna.fbcdn.net&_nc_ohc=lZEu_Eb8d5YAX-XPVqV&oh=14813d68ed114a00883bbb930533f2bb&oe=5F5593A6">	
+
+
+
+		<link href="{% static "assets/css/style.css" %}" rel="stylesheet" />
+
+		<style>
+
+			*{
+				font-family: 'Raleway', sans-serif;
+			}
+			.title {
+				margin: auto;
+    			display: block;
+    			text-align: center;
+    			margin-top: 5%;
+				padding: 0% 5%;
+			}
+			.title span {
+				color: tomato;
+			}
+			.copyright {
+				padding:10px;
+				color:white;
+				padding: 0% 5%;
+			}
+
+			footer{
+				padding: 1.4%;
+				height: auto;
+				box-sizing: border-box;
+			}
+
+			.important{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				margin: auto;
+				margin-top: 1%;
+				padding: 0% 5%;
+			}
+
+			.important p {
+				text-align: center;
+			}
+
+			@media screen and (max-width: 900px ){
+				.title {
+					margin-top: 60px;
+					top: 0;
+					position: absolute;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<h1 class="title">
+			Jupyter Notebook To PDF <span>❤</span>
+		</h1>
+
+		
+
+		<form id="upload" method="post" action="/api/v1/convert/JupyterToPDF" enctype="multipart/form-data">
+			<div id="drop">
+				Drop Here
+
+				<a>Browse</a>
+				<input type="file" name="file" multiple />
+			</div>
+
+			<ul>
+				<!-- The file uploads will be shown here -->
+			</ul>
+
+		</form>
+
+		<div class="important">
+			<strong>Important :</strong>
+			<p>
+				After uploading the file I waited about 1 minute for the PDF to start downloading.
+			</p>
+		</div>
+
+		<footer>
+			<center>
+				<h5 class="copyright">Copyright © 2020 All rights reserved | This web is made with ❤ by Shortcut</h5>
+			</center>
+        </footer>
+        
+		<!-- JavaScript Includes -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="{% static "assets/js/jquery.knob.js" %}"></script>
+		<!-- jQuery File Upload Dependencies -->
+		<script src="{% static "assets/js/jquery.ui.widget.js" %}"></script>
+		<script src="{% static "assets/js/jquery.iframe-transport.js" %}"></script>
+		<script src="{% static "assets/js/jquery.fileupload.js" %}"></script>
+		
+		<!-- Our main JS file -->
+		<script src="{% static "assets/js/script.js" %}"></script>
+
+		<!-- Only used for the demos. Please ignore and remove. --> 
+        <script src="http://cdn.tutorialzine.com/misc/enhance/v1.js" async></script>
+
+	</body>
+</html>
